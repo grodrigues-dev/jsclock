@@ -1,0 +1,109 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: #bfbfbf;
+
+    .border {
+        border-radius: 100%;
+        padding: 22px;
+        box-shadow: -15px 3px 81px 25px rgba(0,0,0,0.75);
+        background-color: #fff;
+
+        @media screen and (max-width: 600px){
+            padding: 15px;
+        }
+        
+    }
+
+    .frame {
+        border: 1px solid black;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+        background-image: url('/images/background.jpg');
+        background-repeat: round;
+        color: #FFF;
+    }
+
+    & .clock {
+        width: 215px;
+        height: 215px;
+        transform: rotate(-90deg);
+
+        @media screen and (min-width: 600px){
+            width: 515px;
+            height: 515px;
+        }
+
+        section {
+            width: 1em;
+            height: 1em;
+            position: absolute;
+            transform: rotate(90deg);
+            font-size: 25px;
+        }
+    }
+
+    #hora, #minutos, #second {
+        position: absolute;
+        transform-origin: top;
+        top: 50%;
+        left: 50%;
+        border-radius: 5px;
+        background: #fff;
+        opacity: 0.8;
+    }   
+
+
+    #second {
+        width: 3px;
+        height: 230px;
+        opacity: 0.8;
+        border-radius: none;
+
+        @media screen and (max-width: 600px){ 
+            height: 85px;
+        }
+    }
+    
+    .pine {
+        width: 20px;
+        height: 20px;
+        border-radius: 100%;
+        left: 48.55%;
+        top: 49%;
+        background: #FFF;
+        position: absolute;
+
+        @media screen and (max-width: 600px){ 
+            height: 20px;
+            width: 20px;
+            left: 47.55%;
+            top: 47%;
+        }
+       
+    }
+    
+}
+
+.hour {
+    width: 9px;
+    height: 140px;
+
+    @media screen and (max-width: 600px){ 
+        height: 60px;
+    }
+}
+
+.minute {
+    width: 6px;
+    height: 230px;
+
+    @media screen and (max-width: 600px){ 
+        height: 85px;
+    }
+}
